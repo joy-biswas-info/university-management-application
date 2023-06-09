@@ -13,12 +13,14 @@
       "no-undef":"error",
       "no-unused-expressions":"error",
       "no-unreachable":"error",
-      "consistent-type-defination":["error","type"]
+      // "consistent-type-defination":["error","type"]
     },
   
     "env": {
       "browser": true,
-      "es2021": true
+      "es2021": true,
+      "node": true,
+      "commonjs": true
     }
   }
   

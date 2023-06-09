@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/joy/next-level/um-software/logs/winston/success/.66a521f82246c6493f36b9683a2c1cf47d2f8087-audit.json",
+    "files": [
+        {
+            "date": 1686300048139,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-09-06-14-success.log",
+            "hash": "5096eec912298c17433bb8d688caaa0c5732fc0c4efefb61b77fe828ce6d3b68"
+        }
+    ],
+    "hashType": "sha256"
+}

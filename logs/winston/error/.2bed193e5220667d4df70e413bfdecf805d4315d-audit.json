@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/joy/next-level/um-software/logs/winston/error/.2bed193e5220667d4df70e413bfdecf805d4315d-audit.json",
+    "files": [
+        {
+            "date": 1686300048145,
+            "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-09-06-14-error.log",
+            "hash": "693586cf8166c3ab2892fde2d422ff7823e713ee6bcb3c363e2db6f5f9a54832"
+        }
+    ],
+    "hashType": "sha256"
+}
