@@ -1,7 +1,8 @@
 import { User } from './user.model'
-import { IUser } from './users.interface'
-import { generateUserId } from './users.utils'
+import { IUser } from './user.interface'
+import { generateUserId } from './user.utils'
 import config from '../../../config'
+import ApiError from '../../../errors/ApiErrors'
 
 const createUser = async (user: IUser): Promise<IUser | null> => {
   // auto incrimental id
@@ -12,14 +13,13 @@ const createUser = async (user: IUser): Promise<IUser | null> => {
   if (!user.password) {
     user.password = config.default_user_pass as string
   }
-
   const creadedUser = await User.create(user)
   if (!creadedUser) {
-    throw new Error('Failed to create user!')
+    throw new ApiError(400, 'Failed to create user!')
   }
   return creadedUser
 }
 
-export default {
+export const UserService = {
   createUser,
 }
