@@ -36,9 +36,9 @@ async function main() {
 }
 main()
 
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM is detected')
-  if (server) {
-    server.close()
-  }
-})
+// process.on('SIGTERM', () => {
+//   logger.info('SIGTERM error is detected')
+//   if (server) {
+//     server.close()
+//   }
+// })
