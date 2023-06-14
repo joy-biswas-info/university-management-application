@@ -54,6 +54,11 @@
             "date": 1686650503568,
             "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-13-06-16-error.log",
             "hash": "3bfae8936f60ea06c6fe50ebd3bba1436395fe87771c5639c35f6197b965053f"
+        },
+        {
+            "date": 1686745371075,
+            "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-14-06-18-error.log",
+            "hash": "21a1d6612c4c39fb3155deb09266be3fce2330d51716a81198546dc17e16e7b3"
         }
     ],
     "hashType": "sha256"

@@ -1,22 +1,24 @@
-import express, { Application, Request, Response } from 'express'
-import cors from 'cors'
-const app: Application = express()
-import globalErrorHandler from './middlewares/globalErrorHandler'
-import { UserRoutes } from './app/modules/user/user.route'
+import express, { Application, Request, Response } from 'express';
+import cors from 'cors';
+const app: Application = express();
+import globalErrorHandler from './middlewares/globalErrorHandler';
+import { UserRoutes } from './app/modules/user/user.route';
+import { AcademicSemesterRoutes } from './app/modules/academicSemester/academicSemester.route';
 
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded())
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded());
 
 // Application Routes
-app.use('/api/v1/users/', UserRoutes)
+app.use('/api/v1/users/', UserRoutes);
+app.use('/api/v1/semester', AcademicSemesterRoutes);
 
 app.get('/', async (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
     message: 'Server is working',
-  })
-})
+  });
+});
 
 // testing
 // app.get('/',async(req: Request, res: Response) => {
@@ -29,6 +31,6 @@ app.get('/', async (req: Request, res: Response) => {
 // })
 
 // global error handeller
-app.use(globalErrorHandler)
+app.use(globalErrorHandler);
 
-export default app
+export default app;

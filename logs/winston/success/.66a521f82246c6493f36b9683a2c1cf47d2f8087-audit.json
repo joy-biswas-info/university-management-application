@@ -54,6 +54,11 @@
             "date": 1686650503560,
             "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-13-06-16-success.log",
             "hash": "8fbd70f6525a0a07b726a25314036ba5cfa6bb3d7baef64d31f37a05874be362"
+        },
+        {
+            "date": 1686745371067,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-18-success.log",
+            "hash": "2414cf3447b4aaede951faa18500f5c11017a64c033ff51ce46ae6d7e8f6568b"
         }
     ],
     "hashType": "sha256"
