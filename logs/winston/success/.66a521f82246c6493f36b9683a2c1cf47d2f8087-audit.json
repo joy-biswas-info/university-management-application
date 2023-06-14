@@ -59,6 +59,26 @@
             "date": 1686745371067,
             "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-18-success.log",
             "hash": "2414cf3447b4aaede951faa18500f5c11017a64c033ff51ce46ae6d7e8f6568b"
+        },
+        {
+            "date": 1686750660517,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-19-success.log",
+            "hash": "ac4c053fe401e17c257396741dc379632bad7ba314e10e6139551102740079f9"
+        },
+        {
+            "date": 1686751292245,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-20-success.log",
+            "hash": "0ef7f8f09520282b091c18fcfb0cb02187a010f45fb3df7c72f8c5351b576823"
+        },
+        {
+            "date": 1686757714089,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-21-success.log",
+            "hash": "ab7efae296cc65522e193b69655836ab55cfaa7edf621da917b0c121299b5652"
+        },
+        {
+            "date": 1686758443401,
+            "name": "/home/joy/next-level/um-software/logs/winston/success/UNMS-2023-14-06-22-success.log",
+            "hash": "85eb1376b88bb4506b35675952ae5b2b8cd1b08f83503723cc3a95814a52b99b"
         }
     ],
     "hashType": "sha256"
