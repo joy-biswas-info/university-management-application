@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose'
-import { IUser, UserModel } from './user.interface'
+import { Schema, model } from 'mongoose';
+import { IUser, UserModel } from './user.interface';
 
 export const userSchema = new Schema<IUser>(
   {
@@ -18,6 +18,6 @@ export const userSchema = new Schema<IUser>(
     },
   },
   { timestamps: true }
-)
+);
 
-export const User = model<IUser, UserModel>('User', userSchema)
+export const User = model<IUser, UserModel>('User', userSchema);
