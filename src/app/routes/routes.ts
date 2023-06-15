@@ -12,6 +12,10 @@ const moduleRoutes = [
     path: '/semester/',
     route: AcademicSemesterRoutes,
   },
+  {
+    path: '/',
+    route: AcademicSemesterRoutes,
+  },
 ];
 
 moduleRoutes.forEach(route => {

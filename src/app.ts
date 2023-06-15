@@ -1,8 +1,9 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Application, NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 const app: Application = express();
 import globalErrorHandler from './middlewares/globalErrorHandler';
 import routes from './app/routes/routes';
+import httpStatus from 'http-status';
 
 app.use(cors());
 app.use(express.json());
@@ -10,6 +11,10 @@ app.use(express.urlencoded());
 
 // Application Routes
 app.use('/api/v1/', routes);
+app.use('/api/v1/', routes);
+
+// global error handeller
+app.use(globalErrorHandler);
 
 app.get('/', async (req: Request, res: Response) => {
   res.status(200).json({
@@ -28,7 +33,19 @@ app.get('/', async (req: Request, res: Response) => {
 //   // next('ore baba error')
 // })
 
-// global error handeller
-app.use(globalErrorHandler);
+// handle not found route
+app.use((req: Request, res: Response, next: NextFunction) => {
+  next();
+  res.status(httpStatus.NOT_FOUND).json({
+    success: false,
+    message: 'Not Found Any Route',
+    errorMessage: [
+      {
+        path: req.originalUrl,
+        message: 'API not Found',
+      },
+    ],
+  });
+});
 
 export default app;
