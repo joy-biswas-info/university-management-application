@@ -9,7 +9,7 @@ const createAcademicSemesterZodSchema = z.object({
     title: z.enum(['Autumn', 'Summer', 'Fall'], {
       required_error: 'Title is required',
     }),
-    year: z.number({ required_error: 'Year is required' }),
+    year: z.string({ required_error: 'Year is required' }),
     code: z.enum([...academicSemesterCode] as [string, ...string[]], {
       required_error: 'Invalid semester code',
     }),

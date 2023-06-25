@@ -9,6 +9,21 @@
             "date": 1686839174668,
             "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-15-06-20-error.log",
             "hash": "e314cf911e88ae8b26b2c5f4dff3e216bdfeb3b8549094a775e85b5432a10216"
+        },
+        {
+            "date": 1686847840093,
+            "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-15-06-22-error.log",
+            "hash": "2cca19b9be7e6f971639ab2881d8165300668aaba49396ad3278720ff75fa8ac"
+        },
+        {
+            "date": 1686848533591,
+            "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-15-06-23-error.log",
+            "hash": "e2b2a5c255383dc131559cbcea38fe1d81728dcc25c4f68b3f912fa8fd9276a8"
+        },
+        {
+            "date": 1686852272696,
+            "name": "/home/joy/next-level/um-software/logs/winston/error/UNMS-2023-16-06-00-error.log",
+            "hash": "616c6ed765894c35cb31d8621d88d5dbbcef8824c1cdce647885a1bdb0350464"
         }
     ],
     "hashType": "sha256"
