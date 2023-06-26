@@ -1,4 +1,4 @@
-import express, { Application, NextFunction, Request, Response } from 'express';
+import express, { Application, Request, Response,NextFunction } from 'express';
 import cors from 'cors';
 const app: Application = express();
 import globalErrorHandler from './middlewares/globalErrorHandler';
@@ -34,7 +34,6 @@ app.get('/', async (req: Request, res: Response) => {
 
 // handle not found route
 app.use((req: Request, res: Response, next: NextFunction) => {
-  next();
   res.status(httpStatus.NOT_FOUND).json({
     success: false,
     message: 'Not Found Any Route',
@@ -45,6 +44,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       },
     ],
   });
+  next()
 });
 
 export default app;

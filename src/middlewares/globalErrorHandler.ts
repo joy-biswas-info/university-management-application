@@ -9,6 +9,7 @@ import handleValidationError from '../errors/handleValidationError';
 import { errorLogger } from '../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from '../errors/handleZodError';
+import { handleCastError } from '../errors/handleCastError';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
@@ -43,6 +44,11 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     statusCode = simplifiedError.statusCode;
     message = simplifiedError?.message;
     errorMessages = simplifiedError?.errorMessages;
+  }else if(error?.name === 'CastError'){
+    const simplifiedError = handleCastError(error);
+    statusCode = simplifiedError.statusCode;
+    message= simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
   } else if (error instanceof Error) {
     message = error?.message;
     errorMessages = error?.message

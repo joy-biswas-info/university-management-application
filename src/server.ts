@@ -15,8 +15,8 @@ async function main() {
     await mongoose.connect(config.database_url as string);
 
     logger.info('connected');
-    server = app.listen(config.port || 5000, () => {
-      logger.info(`App listening on port ${config.port || 5000}`);
+    server = app.listen(config.port , () => {
+      logger.info(`App listening on port ${config.port}`);
     });
   } catch (err) {
     errorLogger.error('faild', err);

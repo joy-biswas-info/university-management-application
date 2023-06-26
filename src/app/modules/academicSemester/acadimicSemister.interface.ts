@@ -18,6 +18,8 @@ export type IacademicSemesterTitle = 'Autumn' | 'Summer' | 'Fall';
 export type IacademicSemesterCode = '01' | '02' | '03';
 
 export type IAcademicSemester = {
+  meta: { page: number; limit: number; total: number; } | undefined;
+  data: IAcademicSemester | null;
   title: IacademicSemesterTitle;
   year: string;
   code: IacademicSemesterCode;
