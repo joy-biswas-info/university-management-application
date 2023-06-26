@@ -24,7 +24,7 @@ const createAcademicSemesterZodSchema = z.object({
 })
 
 
-const updateAcademicSemesterZodSchema = z.object({
+// const updateAcademicSemesterZodSchema = z.object({
   body: z.object({
     title: z.enum([...academicSemesterTitle] as [string,...string[]]).optional(),
     year: z.string({ required_error: 'Year is required' }).optional(),
