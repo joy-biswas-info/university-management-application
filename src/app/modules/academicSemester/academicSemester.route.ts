@@ -9,7 +9,11 @@ router.post(
   validateRequest(academicSemesterValidation.createAcademicSemesterZodSchema),
   AcademicSemesterController.createSemester
 );
-router.patch('/:id',validateRequest(academicSemesterValidation.updateAcademicSemesterZodSchema),AcademicSemesterController.updateSemester);
+router.patch(
+  '/:id',
+  validateRequest(academicSemesterValidation.updateAcademicSemesterZodSchema),
+  AcademicSemesterController.updateSemester
+);
 router.delete('/:id', AcademicSemesterController.deleteSemester);
 router.get('/:id', AcademicSemesterController.getSingleSemester);
 router.get('/', AcademicSemesterController.getAllSemester);

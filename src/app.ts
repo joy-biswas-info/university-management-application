@@ -1,4 +1,4 @@
-import express, { Application, Request, Response,NextFunction } from 'express';
+import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 const app: Application = express();
 import globalErrorHandler from './middlewares/globalErrorHandler';
@@ -44,7 +44,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       },
     ],
   });
-  next()
+  next();
 });
 
 export default app;

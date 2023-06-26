@@ -27,7 +27,7 @@ const getAllSemester = async (
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
   // For Filters & search
-  const { searchTerm,...filtersData } = filters;
+  const { searchTerm, ...filtersData } = filters;
   const academicSemesterSearchableFields = ['title', 'code', 'year'];
   const andCondition = [{}];
 
@@ -42,17 +42,16 @@ const getAllSemester = async (
     });
   }
 
-  // adject match 
+  // adject match
   if (Object.keys(filtersData).length) {
     andCondition.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
-        [field]: value
-      }))
+        [field]: value,
+      })),
     });
   }
 
-  const whereCondition = andCondition.length>0?{$and:andCondition}:{}
-  
+  const whereCondition = andCondition.length > 0 ? { $and: andCondition } : {};
 
   // For Pagination
   const { page, limit, skip, sortBy, sortOrder } =
@@ -78,25 +77,32 @@ const getAllSemester = async (
   };
 };
 
-const getSingleSemester = async (id:string) => {
+const getSingleSemester = async (id: string) => {
   const result = await AcademicSemester.findById(id);
-    return result;
+  return result;
 };
 
-const updateSemester = async(id:string,payload:Partial<IAcademicSemester>)=>{
-  if (payload.title&&payload.code&&academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
+const updateSemester = async (
+  id: string,
+  payload: Partial<IAcademicSemester>
+) => {
+  if (
+    payload.title &&
+    payload.code &&
+    academicSemesterTitleCodeMapper[payload.title] !== payload.code
+  ) {
     throw new ApiError(httpStatus.BAD_GATEWAY, 'Invalid Semester Code');
   }
- const result = await AcademicSemester.findOneAndUpdate({_id:id},payload,{new:true});
- return result
-}
+  const result = await AcademicSemester.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
 
-const deleteSemester =async(id:string)=>{
+const deleteSemester = async (id: string) => {
   const result = await AcademicSemester.findByIdAndDelete(id);
-  return result
-}
-
-
+  return result;
+};
 
 export const AcademicSemesterService = {
   createAcademicSemester,
