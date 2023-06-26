@@ -3,7 +3,7 @@ import ApiError from '../../../errors/ApiErrors';
 import { academicSemesterTitleCodeMapper } from './academicSemesterConostant';
 import { AcademicSemester } from './academicSemesterModel';
 import { IPaginationOptions } from '../../interface/Pagination';
-// import { IAcademicSemester } from './acadimicSemister.interface';
+import { IAcademicSemester } from './acadimicSemister.interface';
 import {
   IAcademicSemesterFilter,
   IGenericResponse,
